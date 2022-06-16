@@ -1,0 +1,26 @@
+﻿@model LAB5_TH.Models.Rubik
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+<h2>@Html.DisplayFor(Model=>Model.ten)</h2>
+<div class="col-sm-12 col-md-12">
+    <div class="thumbnail">
+        <img src="~/images/@Html.DisplayFor(Model=>Model.hinh)" alt="thumbnail" />
+    </div>
+    <div class="caption">
+        <p>Mã loại: @Html.DisplayFor(Model => Model.maloai)</p>
+        <p>Mô tả: @Html.DisplayFor(Model => Model.mota)</p>
+        <p>Giá: @Html.DisplayFor(Model => Model.gia)</p>
+        <p>Hãng: @Html.DisplayFor(Model => Model.hang)</p>
+        <p>Số lượng tồn: @Html.DisplayFor(Model => Model.soluongton)</p>
+        <p>
+            <a href="#" class="btn btn-primary" role="button">Buy</a>
+            @Html.ActionLink("Back","Index","",new { @class= "btn btn-info"})
+        </p>
+    </div>
+</div>
+
